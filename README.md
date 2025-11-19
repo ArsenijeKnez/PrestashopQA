@@ -18,7 +18,7 @@ Install dependencies: This command installs Playwright and its necessary browser
 or
 ``` npx playwright install ```
 
-### Running Tests
+## Running Tests
 All test files are located in the tests/ directory.
 
 #### Run All Tests
