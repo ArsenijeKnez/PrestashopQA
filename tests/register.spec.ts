@@ -86,8 +86,8 @@ test.describe("Registration Flow", () => {
 
     //const email = `autotest_${Date.now()}@mail.com`;
 
-    await frame.locator("#field-firstname").fill("Novi2");
-    await frame.locator("#field-lastname").fill("Korisnik2");
+    await frame.locator("#field-firstname").fill("Novi");
+    await frame.locator("#field-lastname").fill("Korisnik");
     await frame.locator("#field-email").fill(EMAIL);
     await frame.locator("#field-password").fill("QATest555!");
     await frame.locator("#field-birthday").fill("02/02/1990");
@@ -99,7 +99,7 @@ test.describe("Registration Flow", () => {
 
     const emailError = getFieldErrorLocator(frame, "#field-email");
 
-    await expect(emailError).toBeVisible({ timeout: 60000 });
+    await expect(emailError).toBeVisible({ timeout: 40000 });
     await expect(emailError).toHaveText(
       "The email is already used, please choose another one or sign in"
     );
